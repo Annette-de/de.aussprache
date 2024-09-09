@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Учимся немецкому произношению</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- Подключение файла стилей -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> <!-- Жирный эстетичный шрифт -->
 </head>
 <body>
     <header>
@@ -14,45 +14,49 @@
                 <li><a href="#intro">Главная страница</a></li>
                 <li><a href="#sounds">Описание звуков</a>
                     <ul>
-                        <li><a href="#video">Видео артикуляция</a></li>
-                        <li><a href="#audio">Аудио артикуляция</a></li>
+                        <li><a href="#video">Видео артикуляции</a></li>
+                        <li><a href="#audio">Аудио артикуляции</a></li>
                     </ul>
                 </li>
-                <li><a href="#exercises">Упражнения</a></li>
+                <li><a href="#exercises">Упражнения на звуки</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- Главная страница -->
-        <section id="intro">
-            <div class="welcome">
-                <h1>Добро пожаловать!</h1>
-                <p>Привет, меня зовут Фионова Анна. Здесь ты найдешь уроки, направленные на улучшение немецкого произношения. Узнаешь секреты артикуляции и отработаешь звуки с помощью упражнений. Вперёд, к идеальному произношению!</p>
-            </div>
+    <!-- Главная страница -->
+    <section id="intro">
+        <div class="welcome">
+            <h1>Добро пожаловать!</h1>
+            <p>Привет, меня зовут Фионова Анна. Здесь ты найдешь уроки, направленные на улучшение немецкого произношения. Узнаешь секреты артикуляции и отработаешь звуки с помощью упражнений. Вперёд, к идеальному произношению!</p>
+        </div>
+    </section>
+
+    <!-- Описание звуков -->
+    <section id="sounds">
+        <h2>Описание звуков</h2>
+        <p>Здесь будет описание артикуляции немецких звуков.</p>
+
+        <!-- Видео артикуляции -->
+        <section id="video">
+            <h3>Видео артикуляции</h3>
+            <p>Видео демонстрирующее артикуляцию.</p>
         </section>
 
-        <!-- Описание звуков -->
-        <section id="sounds">
-            <h2>Описание звуков</h2>
-            <div id="video">
-                <h3>Видео артикуляция</h3>
-                <p>Здесь будут видео с артикуляцией немецких звуков.</p>
-            </div>
-            <div id="audio">
-                <h3>Аудио артикуляция</h3>
-                <p>Здесь будут аудиоматериалы с правильным произношением.</p>
-            </div>
+        <!-- Аудио артикуляции -->
+        <section id="audio">
+            <h3>Аудио артикуляции</h3>
+            <p>Аудиофайлы для тренировки произношения.</p>
         </section>
+    </section>
 
-        <!-- Упражнения -->
-        <section id="exercises">
-            <h2>Упражнения на отработку звуков</h2>
-            <button onclick="checkAnswer('a')">A: /haʊs/</button>
-            <button onclick="checkAnswer('b')">B: /haʊz/</button>
-            <p id="result"></p>
-        </section>
-    </main>
+    <!-- Упражнения -->
+    <section id="exercises">
+        <h2>Упражнения на отработку звуков</h2>
+        <p>Практические задания для самостоятельной работы.</p>
+        <button onclick="checkAnswer('a')">A: /haʊs/</button>
+        <button onclick="checkAnswer('b')">B: /haʊz/</button>
+        <p id="result"></p>
+    </section>
 
     <footer>
         <p>&copy; 2024 Учимся немецкому произношению. Разработано Фионовой Анной Игоревной</p>
