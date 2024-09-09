@@ -1,10 +1,10 @@
 /* Основные стили */
 body {
-    font-family: 'Poppins', sans-serif; /* Жирный и эстетичный шрифт */
+    font-family: 'Montserrat', sans-serif; /* Жирный эстетичный шрифт */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #ffcc00, #ff0000);
+    background: linear-gradient(to bottom, #f8e8a0, #d3af37); /* Эстетичный градиент */
     background-image: url('pretzel.png'), url('berlin_wall.png'), url('tv_tower.png'), url('castle.png'), url('national_costume.png');
     background-repeat: no-repeat;
     background-position: center top, center bottom, left top, right top, left bottom;
@@ -32,29 +32,38 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
+    position: relative;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #fff; /* Белый цвет для текста */
+    color: #000;
     font-weight: bold;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
-    text-decoration: underline;
-    color: #000; /* Черный цвет при наведении */
+nav ul li:hover > ul {
+    display: block;
 }
 
 nav ul ul {
     display: none;
     position: absolute;
-    background-color: #ffcc00;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-nav ul li:hover > ul {
-    display: block;
+nav ul ul li {
+    margin: 0;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    text-decoration: underline;
+    color: #d3af37;
 }
 
 /* Основные секции */
@@ -71,14 +80,34 @@ section {
 }
 
 /* Заголовки */
-h1, h2, h3 {
-    font-weight: 700; /* Жирный шрифт */
-    color: #fff;
+h1 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Параграфы */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
 }
 
 /* Кнопки */
 button {
-    background-color: #000; /* Черные кнопки */
+    background-color: #333;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -90,15 +119,15 @@ button {
 
 button:hover,
 button:focus {
-    background-color: #333;
+    background-color: #666;
     outline: none;
-    transform: scale(1.05); /* Легкое увеличение кнопки при наведении */
+    transform: scale(1.05);
 }
 
 /* Подвал */
 footer {
     background-color: transparent;
-    color: #fff;
+    color: #000;
     text-align: center;
     padding: 1rem 0;
     position: fixed;
@@ -107,14 +136,14 @@ footer {
     z-index: 1000;
 }
 
-/* Адаптивность для мобильных устройств */
+/* Адаптивность */
 @media (max-width: 768px) {
-    body {
-        background-size: 50px, 50px, 100px, 100px, 75px;
-    }
-
     nav ul {
         flex-direction: column;
+    }
+
+    nav ul ul {
+        position: static;
     }
 
     section {
