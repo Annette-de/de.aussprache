@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учимся немецкому произношению</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение файла стилей -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#intro">Главная страница</a></li>
+                <li><a href="#sounds">Описание звуков</a>
+                    <ul>
+                        <li><a href="#video">Видео артикуляция</a></li>
+                        <li><a href="#audio">Аудио артикуляция</a></li>
+                    </ul>
+                </li>
+                <li><a href="#exercises">Упражнения</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Главная страница -->
+        <section id="intro">
+            <div class="welcome">
+                <h1>Добро пожаловать!</h1>
+                <p>Привет, меня зовут Фионова Анна. Здесь ты найдешь уроки, направленные на улучшение немецкого произношения. Узнаешь секреты артикуляции и отработаешь звуки с помощью упражнений. Вперёд, к идеальному произношению!</p>
+            </div>
+        </section>
+
+        <!-- Описание звуков -->
+        <section id="sounds">
+            <h2>Описание звуков</h2>
+            <div id="video">
+                <h3>Видео артикуляция</h3>
+                <p>Здесь будут видео с артикуляцией немецких звуков.</p>
+            </div>
+            <div id="audio">
+                <h3>Аудио артикуляция</h3>
+                <p>Здесь будут аудиоматериалы с правильным произношением.</p>
+            </div>
+        </section>
+
+        <!-- Упражнения -->
+        <section id="exercises">
+            <h2>Упражнения на отработку звуков</h2>
+            <button onclick="checkAnswer('a')">A: /haʊs/</button>
+            <button onclick="checkAnswer('b')">B: /haʊz/</button>
+            <p id="result"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Учимся немецкому произношению. Разработано Фионовой Анной Игоревной</p>
+    </footer>
+
+    <script>
+        function checkAnswer(choice) {
+            if (choice === 'a') {
+                document.getElementById('result').innerText = 'Правильно!';
+            } else {
+                document.getElementById('result').innerText = 'Попробуйте еще раз.';
+            }
+        }
+    </script>
+</body>
+</html>
